@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sahil Meena | PHP & Laravel Full Stack Developer &amp; Backend Engineer</title>
+  <title>Sahil Meena | PHP &amp; Laravel Full Stack Developer &amp; Backend Engineer</title>
   <meta name="description" content="Portfolio of Sahil Meena — Software Developer with 3+ years of experience specializing in PHP, Laravel, Low-Level System Design, Dual-Database Architectures (MySQL + MongoDB), Redis, Kafka, and Enterprise ERP/CRM Systems." />
 
   <!-- Google Fonts: Inter & JetBrains Mono -->
@@ -61,27 +61,11 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #334155;
     }
-
-    /* Flow connector animation */
-    @keyframes dashFlow {
-      to {
-        stroke-dashoffset: -24;
-      }
-    }
-    .flow-line {
-      stroke-dasharray: 6 6;
-      animation: dashFlow 1.2s linear infinite;
-    }
-
-    /* Tab transition */
-    .tab-content {
-      transition: opacity 0.25s ease, transform 0.25s ease;
-    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
 
-  <!-- Toast Notification Box (No alert() used) -->
+  <!-- Toast Notification Box -->
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
   <!-- Navigation Bar -->
@@ -109,12 +93,12 @@
 
       <!-- CTA & Mobile Menu Button -->
       <div class="flex items-center gap-3">
-        <button onclick="openResumeModal()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-500/20 cursor-pointer">
+        <a href="./Sahil_Meena_Resume.pdf" download="Sahil_Meena_Resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-500/20 cursor-pointer">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
           <span>Download Resume</span>
-        </button>
+        </a>
 
         <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 hover:text-white">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -839,7 +823,7 @@
           </div>
         </div>
 
-        <!-- Education & Certifications Column (4 cols) -->
+        <!-- Education Column (4 cols) -->
         <div class="lg:col-span-4 space-y-6">
           <div>
             <div class="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">Academic Foundation</div>
@@ -866,22 +850,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Deployment Guide Card for User -->
-          <div class="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-925 border border-emerald-500/30 p-5">
-            <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold mb-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-              </svg>
-              <span>HOST THIS PORTFOLIO FREE</span>
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed mb-3">
-              Ready to add this URL to your resume and Naukri/LinkedIn profiles? Host this file on GitHub Pages in 2 minutes.
-            </p>
-            <button onclick="openDeployModal()" class="w-full py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition-colors cursor-pointer">
-              View GitHub Pages Setup Guide →
-            </button>
           </div>
         </div>
 
@@ -934,58 +902,11 @@
         </div>
         <div class="flex items-center gap-5 font-mono">
           <a href="https://github.com/sahilmeena27" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
-          <button onclick="openResumeModal()" class="hover:text-slate-300 transition-colors cursor-pointer">Resume Summary</button>
-          <button onclick="openDeployModal()" class="hover:text-slate-300 transition-colors cursor-pointer">Deploy Guide</button>
+          <a href="./Sahil_Meena_Resume.pdf" download="Sahil_Meena_Resume.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">Download Resume</a>
         </div>
       </div>
     </div>
   </footer>
-
-  <!-- Modal 1: Resume Quick-Preview & Download Actions -->
-  <div id="resume-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-5">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-        <h3 class="text-lg font-bold text-white">Sahil Meena — Resume Export</h3>
-        <button onclick="closeModal('resume-modal')" class="text-slate-400 hover:text-white p-1 cursor-pointer">✕</button>
-      </div>
-      <p class="text-sm text-slate-300 leading-relaxed">
-        Your ATS-optimized 2-page resume is ready. When hosting this portfolio on GitHub Pages, place your exported <code class="text-emerald-400">Sahil_Meena_Resume.pdf</code> file in the same repository folder so recruiters can download it directly in one click.
-      </p>
-      <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-400 space-y-1">
-        <div class="text-white font-semibold">Recommended Header Line for Your Resume:</div>
-        <div class="text-emerald-400">Portfolio: https://sahilmeena27.github.io</div>
-      </div>
-      <div class="flex flex-wrap justify-end gap-3 pt-2">
-        <button onclick="closeModal('resume-modal')" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold cursor-pointer">
-          Close
-        </button>
-        <a href="Sahil_Meena_Resume.pdf" download="Sahil_Meena_Resume.pdf" onclick="showToast('Downloading Sahil_Meena_Resume.pdf (Ensure PDF is placed in root folder)')" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold cursor-pointer">
-          Trigger PDF Download
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: GitHub Pages Deployment Guide -->
-  <div id="deploy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-4">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-        <h3 class="text-lg font-bold text-white">Deploy Free on GitHub Pages (2 Minutes)</h3>
-        <button onclick="closeModal('deploy-modal')" class="text-slate-400 hover:text-white p-1 cursor-pointer">✕</button>
-      </div>
-      <ol class="space-y-3 text-sm text-slate-300 list-decimal list-inside">
-        <li>Log into your GitHub account (<strong class="text-white">github.com/sahilmeena27</strong>) and create a new public repository named <code class="text-emerald-400">sahilmeena27.github.io</code>.</li>
-        <li>Upload this <code class="text-cyan-400">index.html</code> file along with your resume PDF renamed to <code class="text-cyan-400">Sahil_Meena_Resume.pdf</code>.</li>
-        <li>Go to <strong class="text-white">Settings → Pages</strong>, select <code class="text-amber-300">main</code> branch, and click <strong class="text-white">Save</strong>.</li>
-        <li>Your live portfolio URL <code class="text-emerald-400">https://sahilmeena27.github.io</code> will go live automatically! Add this URL to your Resume header, Naukri, and LinkedIn.</li>
-      </ol>
-      <div class="flex justify-end pt-2">
-        <button onclick="closeModal('deploy-modal')" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold cursor-pointer">
-          Got It
-        </button>
-      </div>
-    </div>
-  </div>
 
   <!-- Interactive JavaScript Logic -->
   <script>
@@ -999,7 +920,7 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Toast Notification Utility (Replaces alert())
+    // Toast Notification Utility
     function showToast(message) {
       const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
@@ -1014,7 +935,7 @@
       }, 2800);
     }
 
-    // Clipboard Copy Utility (Uses execCommand fallback for iFrame safety)
+    // Clipboard Copy Utility
     function copyText(text, label) {
       const tempInput = document.createElement('textarea');
       tempInput.value = text;
@@ -1027,25 +948,6 @@
         showToast(`Could not copy ${label}`);
       }
       document.body.removeChild(tempInput);
-    }
-
-    // Modal Controls
-    function openResumeModal() {
-      const modal = document.getElementById('resume-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function openDeployModal() {
-      const modal = document.getElementById('deploy-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
     }
 
     // KhoKho ERP Architecture Node Data
